@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Foodee.Dto.ReservationDtos
+{
+	public class CreateReservationDto
+	{
+		public string Name { get; set; }
+		public string Email { get; set; }
+		public int People { get; set; }
+		public DateTime ReservationDate { get; set; }
+		public string Message { get; set; }
+	}
+}

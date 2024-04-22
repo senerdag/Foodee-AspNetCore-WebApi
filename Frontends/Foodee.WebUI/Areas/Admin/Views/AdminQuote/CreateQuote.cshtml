@@ -1,0 +1,30 @@
+﻿@model CreateQuoteDto
+
+@{
+    ViewData["Title"] = "CreateQuote";
+    Layout = "~/Areas/Admin/Views/AdminUILayout/Index.cshtml";
+}
+
+<div class="card">
+    <div class="card-body">
+
+        <h4 class="card-title">Create Quote</h4>
+        <p class="card-subtitle mb-4">** Fill the all Blanks **</p>
+
+        <form method="post">
+            <div class="form-group">
+                <label for="exampleInputPersonName">Person Name</label>
+                <input asp-for="PersonName" class="form-control" placeholder="Person Name">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputDescription">Description</label>
+                <input asp-for="Description" class="form-control" placeholder="Description">
+            </div>
+            
+
+            <button type="submit" class="btn btn-primary waves-effect waves-light">Create Quote</button>
+        </form>
+
+    </div> <!-- end card-body-->
+</div>
+

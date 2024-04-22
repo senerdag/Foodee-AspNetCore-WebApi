@@ -1,0 +1,46 @@
+﻿@model UpdateFoodDto
+
+@{
+    ViewData["Title"] = "UpdateFood";
+    Layout = "~/Areas/Admin/Views/AdminUILayout/Index.cshtml";
+}
+
+<div class="card">
+    <div class="card-body">
+
+        <h4 class="card-title">Update Food</h4>
+        <p class="card-subtitle mb-4">** Fill the All Blanks **</p>
+
+        <form method="post">
+            <input type="hidden" asp-for="FoodId" />
+            <div class="form-group">
+                <label for="exampleInputName">Name</label>
+                <input asp-for="Name" class="form-control" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputDescription">Description</label>
+                <input asp-for="Description" class="form-control" placeholder="Description">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPrice">Price</label>
+                <input asp-for="Price" class="form-control" placeholder="Price">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputCoverImageUrl">Cover Image Url</label>
+                <input asp-for="CoverImageUrl" class="form-control" placeholder="Cover Image Url">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputCategoryId">Category Id</label>
+                <input asp-for="CategoryId" class="form-control" readonly placeholder="CategoryId">
+            </div>
+            <div class="form-group mb-3">
+                <img src="@Model.CoverImageUrl" style="width:20m; height:20m" />
+            </div>
+            
+
+            <button type="submit" class="btn btn-success waves-effect waves-light">Update Food</button>
+        </form>
+
+    </div> <!-- end card-body-->
+</div>
+

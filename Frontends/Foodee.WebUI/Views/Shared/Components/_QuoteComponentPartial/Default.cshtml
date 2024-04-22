@@ -1,0 +1,28 @@
+﻿@model List<ResultQuoteDto>
+
+<div id="fh5co-sayings">
+	<div class="container">
+		<div class="row to-animate">
+
+			<div class="flexslider">
+				<ul class="slides">
+
+					@foreach(var item in Model)
+					{
+						<li>
+							
+								<p>&ldquo;@item.Description&rdquo;</p>
+								<p class="quote-author">&mdash; @item.PersonName</p>
+							
+						</li>
+					}
+					
+
+
+
+				</ul>
+			</div>
+
+		</div>
+	</div>
+</div>

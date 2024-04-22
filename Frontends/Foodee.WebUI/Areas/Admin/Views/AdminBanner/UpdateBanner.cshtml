@@ -1,0 +1,34 @@
+﻿@model UpdateBannerDto
+
+@{
+    ViewData["Title"] = "UpdateBanner";
+    Layout = "~/Areas/Admin/Views/AdminUILayout/Index.cshtml";
+}
+
+<div class="card">
+    <div class="card-body">
+
+        <h4 class="card-title">Update Banner</h4>
+        <p class="card-subtitle mb-4">** Fill the all Blanks (Just let one item) **</p>
+
+        <form method="post">
+            <input type="hidden" asp-for="BannerId" />
+            <div class="form-group">
+                <label for="exampleInputTitle">Title</label>
+                <input asp-for="Title" class="form-control" placeholder="Title">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputDescription">Description</label>
+                <input asp-for="Description" class="form-control" placeholder="Description">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputCoverImageUrl">Cover Image Url</label>
+                <input asp-for="CoverImageUrl" class="form-control" placeholder="Cover Image Url">
+            </div>
+
+
+            <button type="submit" class="btn btn-primary waves-effect waves-light">Update Banner</button>
+        </form>
+
+    </div> <!-- end card-body-->
+</div>

@@ -1,0 +1,57 @@
+﻿@model List<ResultCategoryDto>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/AdminUILayout/Index.cshtml";
+    int count = 0;
+}
+
+<div class="row">
+    <div class="col-xl-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Categories</h4>
+                <p class="card-subtitle mb-4">
+                    Create Delete and List 
+                </p>
+                <div class="table-responsive">
+                    <table class="table mb-0">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Icon</th>
+                                <th>Update</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach(var item in Model)
+                            {
+                                count++;
+                                <tr>
+                                    <th scope="row">@count</th>
+                                    <td>@item.Name</td>
+                                    <td>@item.Description</td>
+                                    <td>@item.Icon</td>
+                                    <td> <a href="/Admin/AdminCategory/UpdateCategory/@item.CategoryId" class="btn btn-success">Update</a></td>
+                                    <td> <a href="/Admin/AdminCategory/DeleteCategory/@item.CategoryId" class="btn btn-danger">Delete</a></td>
+                                </tr>
+
+                            }
+                            
+
+                        </tbody>
+                    </table>
+                    <a href="/Admin/AdminCategory/CreateCategory/" class="btn btn-primary">Create Category</a>
+                </div>
+
+            </div>
+            <!-- end card-body-->
+        </div>
+        <!-- end card -->
+
+    </div>
+</div>
+

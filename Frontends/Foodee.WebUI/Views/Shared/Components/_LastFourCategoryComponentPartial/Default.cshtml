@@ -1,0 +1,19 @@
+﻿@model List<ResultLastFourCategory>
+
+<div id="fh5co-type" style="background-image: url(/foodee-master/images/slide_3.jpg);" data-stellar-background-ratio="0.5">
+	<div class="fh5co-overlay"></div>
+	<div class="container">
+		<div class="row">
+			@foreach(var item in Model)
+			{
+				<div class="col-md-3 to-animate">
+					<div class="fh5co-type">
+						<h3 class="with-icon @item.Icon">@item.Name</h3>
+						<p>@item.Description</p>
+					</div>
+				</div>
+			}
+			
+		</div>
+	</div>
+</div>

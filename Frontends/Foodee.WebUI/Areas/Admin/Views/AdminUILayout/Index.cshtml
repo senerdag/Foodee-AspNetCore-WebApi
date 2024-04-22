@@ -1,0 +1,201 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Xacton - Admin & Dashboard Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="MyraStudio" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="~/Admin/vertical/assets/images/favicon.ico">
+
+    <!-- App css -->
+    <link href="~/Admin/vertical/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Admin/vertical/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Admin/vertical/assets/css/theme.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Plugins css -->
+    <link href="~/Admin/plugins/datatables/dataTables.bootstrap4.css" rel="stylesheet" type="text/css" />
+    <link href="~/Admin/plugins/datatables/responsive.bootstrap4.css" rel="stylesheet" type="text/css" />
+    <link href="~/Admin/plugins/datatables/buttons.bootstrap4.css" rel="stylesheet" type="text/css" />
+    <link href="~/Admin/plugins/datatables/select.bootstrap4.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+        <header id="page-topbar">
+            <div class="navbar-header">
+
+                
+
+                <div class="d-flex align-items-center">
+
+                    
+
+                    
+
+                    
+
+                    
+
+                </div>
+            </div>
+        </header>
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="vertical-menu">
+
+            <div data-simplebar class="h-100">
+
+                <div class="navbar-brand-box">
+                    <a href="/Admin/AdminCategory/Index/" class="logo">
+                        <i class="mdi mdi-alpha-x-circle"></i>
+                        <span>
+                            Xacton
+                        </span>
+                    </a>
+                </div>
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <!-- Left Menu Start -->
+                    <ul class="metismenu list-unstyled" id="side-menu">
+                        <li class="menu-title">Menu</li>
+
+                        <li>
+                            <a href="/Default/Index/" class="waves-effect"><i class="feather-airplay"></i><span>Go To Site</span></a>
+                        </li>
+                        <li>
+                            <a href="/Admin/AdminCategory/Index/" class="waves-effect"><i class="feather-airplay"></i><span>Category</span></a>
+                        </li>
+                        <li>
+                            <a href="/Admin/AdminFood/Index/" class="waves-effect"><i class="feather-airplay"></i><span>Food</span></a>
+                        </li>
+                        <li>
+                            <a href="/Admin/AdminAbout/Index/" class="waves-effect"><i class="feather-airplay"></i><span>About</span></a>
+                        </li>
+                        <li>
+                            <a href="/Admin/AdminReservation/Index/" class="waves-effect"><i class="feather-airplay"></i><span>Reservation</span></a>
+                        </li>
+                        <li>
+                            <a href="/Admin/AdminBanner/Index/" class="waves-effect"><i class="feather-airplay"></i><span>Banner</span></a>
+                        </li>
+                        <li>
+                            <a href="/Admin/AdminContactInfo/Index/" class="waves-effect"><i class="feather-airplay"></i><span>Contact Info</span></a>
+                        </li>
+                        <li>
+                            <a href="/Admin/AdminDescription/Index/" class="waves-effect"><i class="feather-airplay"></i><span>Description</span></a>
+                        </li>
+                        <li>
+                            <a href="/Admin/AdminEvent/Index/" class="waves-effect"><i class="feather-airplay"></i><span>Event</span></a>
+                        </li>
+                        <li>
+                            <a href="/Admin/AdminQuote/Index/" class="waves-effect"><i class="feather-airplay"></i><span>Quote</span></a>
+                        </li>
+                        <li>
+                            <a href="/Admin/AdminSocialMedia/Index/" class="waves-effect"><i class="feather-airplay"></i><span>Social Media</span></a>
+                        </li>
+                        
+                        
+
+
+                    </ul>
+                </div>
+                <!-- Sidebar -->
+            </div>
+        </div>
+        <!-- Left Sidebar End -->
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content ">
+
+            <div class="page-content">
+                <div class="container-fluid">
+
+    
+                    @RenderBody()
+
+
+                </div> 
+            </div>
+            @await Component.InvokeAsync("NToastNotify")
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            @DateTime.Now.Year © Sener.
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="text-sm-right d-none d-sm-block">
+                                Design & Develop by Sener
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+        <!-- end main content-->
+
+    </div>
+    <!-- END layout-wrapper -->
+
+    <!-- Overlay-->
+    <div class="menu-overlay"></div>
+
+
+    <!-- jQuery  -->
+    <script src="~/Admin/vertical/assets/js/jquery.min.js"></script>
+    <script src="~/Admin/vertical/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Admin/vertical/assets/js/metismenu.min.js"></script>
+    <script src="~/Admin/vertical/assets/js/waves.js"></script>
+    <script src="~/Admin/vertical/assets/js/simplebar.min.js"></script>
+
+    <!-- third party js -->
+    <script src="~/Admin/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/Admin/plugins/datatables/dataTables.bootstrap4.js"></script>
+    <script src="~/Admin/plugins/datatables/dataTables.responsive.min.js"></script>
+    <script src="~/Admin/plugins/datatables/responsive.bootstrap4.min.js"></script>
+    <script src="~/Admin/plugins/datatables/dataTables.buttons.min.js"></script>
+    <script src="~/Admin/plugins/datatables/buttons.bootstrap4.min.js"></script>
+    <script src="~/Admin/plugins/datatables/buttons.html5.min.js"></script>
+    <script src="~/Admin/plugins/datatables/buttons.flash.min.js"></script>
+    <script src="~/Admin/plugins/datatables/buttons.print.min.js"></script>
+    <script src="~/Admin/plugins/datatables/dataTables.keyTable.min.js"></script>
+    <script src="~/Admin/plugins/datatables/dataTables.select.min.js"></script>
+    <script src="~/Admin/plugins/datatables/pdfmake.min.js"></script>
+    <script src="~/Admin/plugins/datatables/vfs_fonts.js"></script>
+    <!-- third party js ends -->
+    <!-- Datatables init -->
+    <script src="~/Admin/vertical/assets/pages/datatables-demo.js"></script>
+
+    <!-- Morris Js-->
+    <script src="~/Admin/plugins/morris-js/morris.min.js"></script>
+    <!-- Raphael Js-->
+    <script src="~/Admin/plugins/raphael/raphael.min.js"></script>
+
+    <!-- Morris Custom Js-->
+    <script src="~/Admin/vertical/assets/pages/dashboard-demo.js"></script>
+
+    <!-- App js -->
+    <script src="~/Admin/vertical/assets/js/theme.js"></script>
+
+</body>
+
+</html>

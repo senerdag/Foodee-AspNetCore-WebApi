@@ -1,0 +1,80 @@
+﻿@model List<GetLast6FoodDto>
+@{
+	int count = 0;
+}
+
+<div id="fh5co-featured" data-section="features">
+	<div class="container">
+		<div class="row text-center fh5co-heading row-padded">
+			<div class="col-md-8 col-md-offset-2">
+				<h2 class="heading to-animate">Featured Dishes</h2>
+				@await Component.InvokeAsync("_DescriptionComponentPartial", new {id = 1})
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="fh5co-grid">
+
+				@foreach(var item in Model)
+				{
+					count++;
+
+					if (count % 6 == 1 || count % 6 == 0)
+					{
+						<div class="fh5co-v-half to-animate-2">
+							<div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(@item.CoverImageUrl)"></div>
+							<div class="fh5co-v-col-2 fh5co-text fh5co-special-1 arrow-left">
+								<h2>@item.Name</h2>
+								<span class="pricing">$@item.Price</span>
+								<p>@item.Description</p>
+							</div>
+						</div>
+					}
+
+					else
+					{
+						<div class="fh5co-v-half">
+							@if (count % 6 == 2 || count % 6 == 5)
+							{
+								<div class="fh5co-h-row-2 to-animate-2">
+									<div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(@item.CoverImageUrl)"></div>
+									<div class="fh5co-v-col-2 fh5co-text arrow-left">
+										<h2>@item.Name</h2>
+										<span class="pricing">$@item.Price</span>
+										<p>@item.Description</p>
+									</div>
+								</div>
+							}
+
+
+							@if (count % 6 == 3 || count % 6 == 4)
+							{
+								<div class="fh5co-h-row-2 fh5co-reversed to-animate-2">
+
+								
+									<div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(@item.CoverImageUrl)"></div>
+									<div class="fh5co-v-col-2 fh5co-text arrow-right">
+										<h2>@item.Name</h2>
+										<span class="pricing">$@item.Price</span>
+										<p>@item.Description</p>
+									</div>
+								
+
+								</div>
+
+							}
+
+						</div>
+					}
+					
+
+					
+					
+
+				}
+
+			</div>
+		</div>
+
+	</div>
+</div>

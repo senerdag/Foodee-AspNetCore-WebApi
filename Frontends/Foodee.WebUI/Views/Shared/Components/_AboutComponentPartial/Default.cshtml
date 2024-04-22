@@ -1,0 +1,15 @@
+﻿@model List<ResultAboutDto>
+
+
+<div id="fh5co-about" data-section="about">
+	@foreach(var item in Model)
+	{
+		<div class="fh5co-2col fh5co-bg to-animate-2" style="background-image: url(@item.CoverImageUrl)"></div>
+		<div class="fh5co-2col fh5co-text">
+			<h2 class="heading to-animate">@item.Title</h2>
+			<p class="to-animate">@* <span class="firstcharacter">F</span> *@ @item.Description</p>
+			<p class="text-center to-animate"><a href="#" data-nav-section="reservation" class="btn btn-primary btn-outline">Get in touch</a></p>
+		</div>
+	}
+
+</div>

@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\foodee-master\.DS_Store" />
+    <None Include="wwwroot\foodee-master\css\.DS_Store" />
+    <None Include="wwwroot\foodee-master\fonts\.DS_Store" />
+    <None Include="wwwroot\foodee-master\fonts\icomoon\.DS_Store" />
+    <None Include="wwwroot\foodee-master\fonts\icomoon\icomoon\.DS_Store" />
+    <None Include="wwwroot\foodee-master\images\.DS_Store" />
+    <None Include="wwwroot\foodee-master\js\.DS_Store" />
+    <None Include="wwwroot\foodee-master\sass\.DS_Store" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter" Version="8.0.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
+    <PackageReference Include="NToastNotify" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Foodee.Application\Foodee.Application.csproj" />
+    <ProjectReference Include="..\Foodee.Dto\Foodee.Dto.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+  </ItemGroup>
+
+</Project>

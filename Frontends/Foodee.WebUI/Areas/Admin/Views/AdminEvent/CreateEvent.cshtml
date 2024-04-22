@@ -1,0 +1,37 @@
+﻿@model CreateEventDto
+
+@{
+    ViewData["Title"] = "CreateEvent";
+    Layout = "~/Areas/Admin/Views/AdminUILayout/Index.cshtml";
+}
+
+<div class="card">
+    <div class="card-body">
+
+        <h4 class="card-title">Create Event</h4>
+        <p class="card-subtitle mb-4">** Fill the all Blanks  **</p>
+       
+        <form method="post">
+            <div asp-validation-summary="ModelOnly"></div>
+            <div class="form-group">
+                <label for="exampleInputTitle">Title</label>
+                <input asp-for="Title" class="form-control" placeholder="Title">
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputDescription">Description</label>
+                <input asp-for="Description" class="form-control" placeholder="Description">
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEventDate">Event Date</label>
+                <input asp-for="EventDate" class="form-control" placeholder="Event Date">
+            </div>
+
+
+            <button type="submit" class="btn btn-primary waves-effect waves-light">Create Event</button>
+        </form>
+
+    </div> <!-- end card-body-->
+</div>
+

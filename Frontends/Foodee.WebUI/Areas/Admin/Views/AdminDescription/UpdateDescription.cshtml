@@ -1,0 +1,31 @@
+﻿@model UpdateDescriptionDto
+
+@{
+    ViewData["Title"] = "UpdateDescription";
+    Layout = "~/Areas/Admin/Views/AdminUILayout/Index.cshtml";
+}
+
+<div class="card">
+    <div class="card-body">
+
+        <h4 class="card-title">Update Description</h4>
+        <p class="card-subtitle mb-4">** Fill the all Blanks **</p>
+
+        <form method="post">
+            <input type="hidden" asp-for="DescriptionId" />
+            <div class="form-group">
+                <label for="exampleInputName">Name</label>
+                <input asp-for="Name" class="form-control" readonly placeholder="Name">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputMainDescription">MainDescription</label>
+                <input asp-for="MainDescription" class="form-control" placeholder="MainDescription">
+            </div>
+            
+
+
+            <button type="submit" class="btn btn-primary waves-effect waves-light">Update Description</button>
+        </form>
+
+    </div> <!-- end card-body-->
+</div>

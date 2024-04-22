@@ -1,0 +1,55 @@
+﻿@model List<GetCategoryWithFoodsList>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/AdminUILayout/Index.cshtml";
+    int count = 0;
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Food List</h4>
+                <p class="card-subtitle mb-4">
+                    CRUD operations.
+                </p>
+
+                <table id="complex-header-datatable" class="table ">
+                    <thead class="thead-light">
+                        
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Category Name</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                            <th>Price</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach(var item in Model)
+                        {
+                            count++;
+                            <tr>
+                                <td>@count</td>
+                                <td>@item.Name</td>
+                                <td>@item.CategoryName</td>
+                                <td> <a href="/Admin/AdminFood/UpdateFood/@item.FoodId" class="btn btn-success">Update</a></td>
+                                <td> <a href="/Admin/AdminFood/DeleteFood/@item.FoodId" class="btn btn-danger">Delete</a></td>
+                                <td>@item.Price</td>
+
+                            </tr>
+                        }
+                        
+
+                    </tbody>
+                </table>
+                <a href="/Admin/AdminFood/CreateFood/" class="btn btn-primary">Create Food</a>
+
+            </div> <!-- end card body-->
+        </div> <!-- end card -->
+    </div><!-- end col-->
+</div>
+

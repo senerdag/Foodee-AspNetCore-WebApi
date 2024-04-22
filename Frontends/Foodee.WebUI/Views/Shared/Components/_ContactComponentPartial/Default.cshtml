@@ -1,0 +1,6 @@
+﻿@model List<ResultContactInfoDto>
+
+@foreach (var item in Model)
+{
+	<li class="fh5co-contact-address "><i class="@item.Icon"></i>@item.Description</li>
+}

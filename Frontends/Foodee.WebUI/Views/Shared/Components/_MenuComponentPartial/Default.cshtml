@@ -1,0 +1,65 @@
+﻿@model List<GetCategoryWithFoodsList>
+@{
+	int temp=-10;
+	HashSet<int> exId = new HashSet<int>();
+}
+<div id="fh5co-menus" data-section="menu">
+	<div class="container">
+		<div class="row text-center fh5co-heading row-padded">
+			<div class="col-md-8 col-md-offset-2">
+				<h2 class="heading to-animate">Food Menu</h2>
+				@await Component.InvokeAsync("_DescriptionComponentPartial", new { id = 3 })
+			</div>
+		</div>
+		<div class="row row-padded">
+			@foreach(var item in Model)
+			{
+				if (temp != item.CategoryId)
+				{
+					exId.Add(temp);
+					<div class="col-md-6">
+						<div class="fh5co-food-menu to-animate-2">
+							@if(!exId.Contains(item.CategoryId))
+							{
+							<h2 class="fh5co-@item.Icon">@item.CategoryName</h2>
+							}
+							
+							<ul>
+								@foreach (var item2 in Model)
+								{
+									if (item2.CategoryId == item.CategoryId && !exId.Contains(item.CategoryId))
+									{
+										<li>
+											<div class="fh5co-food-desc">
+												<figure>
+													<img src="@item2.CoverImageUrl" class="img-responsive" >
+												</figure>
+												<div>
+													<h3>@item2.Name</h3>
+													<p>@item2.Description</p>
+												</div>
+											</div>
+											<div class="fh5co-food-pricing">
+												@item2.Price
+											</div>
+										</li>
+										
+									}
+								
+
+								}
+								
+
+							</ul>
+						</div>
+					</div>
+
+				}
+
+
+				temp = item.CategoryId;
+			}
+		</div>
+		
+	</div>
+</div>
