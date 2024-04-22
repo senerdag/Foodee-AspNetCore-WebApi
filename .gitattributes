@@ -66,3 +66,4 @@
 *.c# linguist-detectable=true
 *.scss linguist-detectable=false
 *.html linguist-detectable=false
+*.js linguist-detectable=false
